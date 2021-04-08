@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head><title>[% title %], [% page %]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<link href="[% viewer_path %]/layout/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href="[% viewer_path %]/layout/favicon.png" rel="shortcut icon" type="image/png">
+<link href="[% viewer_path %]/layout/homeicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+<link href="." rel="first">[% IF prev %]
+<link href="[% prev_link %]" rel="prev">[% END %][% IF next %]
+<link href="[% next_link %]" rel="next">[% END %]
+<script src="[% viewer_path %]/keys.js" type="text/javascript"></script></head>
+<body>[% IF prev %]<div id="prev"><a href="[% prev_link %]"><img src="[% viewer_path %]/layout/button-l.svg" alt="&#8678;" class="button"></a></div>
+[% END %]<div id="page" style="background-image: url([% img %]);"><img src="[% img %]" [% img_size %] alt="[% page %]"></div>[% IF next %]
+<div id="next"><a href="[% next_link %]"><img src="[% viewer_path %]/layout/button-r.svg" alt="&#8680;" class="button"></a></div>[% END %]</body></html>

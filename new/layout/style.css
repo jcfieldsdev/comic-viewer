@@ -1,0 +1,337 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body, html {
+	margin: 0;
+}
+
+button {
+	text-align: center;
+}
+
+button#allpages {
+	background-image: url(icon-gallery.svg);
+}
+
+button#back {
+	align-self: center;
+	background-color: transparent;
+	background-image: url(icon-back.svg);
+	background-size: 75px 75px;
+	border: 0;
+	color: inherit;
+	flex-grow: 1;
+	height: 75px;
+	margin: 0 2em;
+	min-width: 75px;
+}
+
+button#enter {
+	background-image: url(icon-enter.svg);
+}
+
+button#exit {
+	background-image: url(icon-exit.svg);
+}
+
+button#first {
+	background-image: url(icon-first.svg);
+}
+
+button#last {
+	background-image: url(icon-last.svg);
+}
+
+button#next {
+	background-image: url(icon-next.svg);
+}
+
+button#previous {
+	background-image: url(icon-previous.svg);
+}
+
+button.page {
+	background: transparent;
+	border: 0;
+	color: inherit;
+}
+
+button.page img {
+	border: 4px solid #fff;
+	height: 150px;
+	margin-bottom: 0.5em;
+	width: auto;
+}
+
+button.page img.hidden {
+	filter: blur(4px);
+}
+
+button.section {
+	background: transparent;
+	border-color: #303030;
+	border-style: solid;
+	border-width: 2px 0 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1.5rem;
+	padding: 1.5em;
+	text-shadow: 2px 2px #000;
+	width: 100%;
+}
+
+button.section:first-child {
+	border-top-width: 0;
+}
+
+button:hover, button:focus {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+div#buttons {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+div#buttons button, div#fullscreen button {
+	background-color: transparent;
+	background-position: 50% 25%;
+	background-repeat: no-repeat;
+	background-size: 6em 6em;
+	border: 0;
+	border-radius: 2em;
+	color: inherit;
+	font: inherit;
+	line-height: 200%;
+	margin: 1em;
+	opacity: 0.5;
+	padding-top: 8em;
+	white-space: nowrap;
+	width: 10em;
+}
+
+div#buttons button:hover, div#buttons button:focus {
+	background-color: #202020;
+	opacity: 1;
+	transition: 0.5s opacity;
+}
+
+div#buttons button[disabled] {
+	opacity: 0.1;
+}
+
+div#buttons div:first-child {
+	border-right: 2px solid #303030;
+}
+
+div#controls {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+}
+
+div#current {
+	background: none;
+	color: #c0c0c0;
+	padding: 0.25em;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+}
+
+div#error {
+	bottom: auto;
+	padding: 1.5em 4em;
+	top: 5%;
+}
+
+div#fullscreen {
+	bottom: auto;
+	left: auto;
+	right: -100%;
+	top: -100%;
+}
+
+div#fullscreen button {
+	padding-top: 6em;
+	width: 6em;
+}
+
+div#fullscreen button span {
+	display: none;
+}
+
+div#fullscreen.open {
+	bottom: auto;
+	right: 5%;
+	top: 5%;
+	transition: 0.2s top, 0.2s right, 1s opacity;
+}
+
+div#gallery {
+	display: flex;
+	flex-wrap: nowrap;
+	max-width: 90%;
+	overflow-x: scroll;
+	padding: 2em;
+}
+
+div#loading {
+	background: #000;
+	border-radius: 2em;
+	color: inherit;
+	left: 50%;
+	opacity: 0;
+	padding: 1em;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	z-index: 3;
+}
+
+div#loading img {
+	filter: invert(1);
+	height: 128px;
+	width: 128px;
+}
+
+div#loading.open {
+	opacity: 0.7;
+	transition: 1s opacity;
+	visibility: visible;
+}
+
+div#page {
+	height: 100%;
+	z-index: 1;
+}
+
+div#page img {
+	height: 100%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+}
+
+div#sections {
+	bottom: auto;
+	display: flex;
+	flex-direction: column;
+	top: -100%;
+	width: 20em;
+}
+
+div#sections.open {
+	bottom: auto;
+	top: 5%;
+	transition: 0.2s top, 1s opacity;
+}
+
+div.overlay {
+	background: linear-gradient(#101010, #202020);
+	border-radius: 2em;
+	bottom: -100%;
+	color: inherit;
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	transform: translateX(-50%);
+	transition: 0.3s all;
+	z-index: 2;
+}
+
+div.overlay.open {
+	bottom: 5%;
+	opacity: 0.95;
+	transition: 0.2s bottom, 1s opacity;
+}
+
+html {
+	background: #000;
+	color: #fff;
+	font: 9pt Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	padding: 0;
+}
+
+progress {
+	appearance: none;
+	background: transparent;
+	border-color: #303030;
+	border-style: solid;
+	border-width: 2px 0 0 0;
+	color: inherit;
+	height: 1em;
+	padding: 0;
+	width: 100%;
+}
+
+progress[value]::-moz-progress-bar {
+	background: #606060;
+	color: inherit;
+}
+
+progress[value]::-webkit-progress-value {
+	background: #606060;
+	color: inherit;
+}
+
+@media (orientation: portrait) {
+	div#page img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+@media (max-width: 414px) {
+	button#back {
+		background-size: 50px 50px;
+		height: 50px;
+		min-width: 50px;
+	}
+
+	button.page img {
+		height: 100px;
+	}
+
+	html {
+		font-size: 6pt;
+	}
+}
+
+@media (max-width: 375px) {
+	button#back {
+		background-size: 38px 38px;
+		height: 38px;
+		min-width: 38px;
+	}
+
+	button.page img {
+		height: 75px;
+	}
+
+	html {
+		font-size: 5pt;
+	}
+}
+
+@media (max-width: 320px) {
+	button#back {
+		background-size: 25px 25px;
+		height: 25px;
+		min-width: 25px;
+	}
+
+	button.page img {
+		height: 50px;
+	}
+
+	html {
+		font-size: 4.5pt;
+	}
+}

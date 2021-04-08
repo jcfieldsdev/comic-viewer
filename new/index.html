@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Comic Viewer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<base href="/includes/comic/">
+<link href="layout/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href="layout/favicon.png" rel="shortcut icon" type="image/png">
+<link href="layout/homeicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+<script src="comic.js" type="text/javascript"></script></head>
+<body><noscript><p>Must have JavaScript enabled.</p></noscript>
+<div id="page"><img src="layout/blank.png" alt="Blank Page"></div>
+<div id="loading"><img src="layout/loading.svg" alt="Loading"></div>
+<div id="sections" class="overlay"></div>
+<div id="fullscreen" class="overlay">
+	<button type="button" id="enter"><span>Enter Fullscreen</span></button>
+	<button type="button" id="exit"><span>Exit Fullscreen</span></button>
+</div>
+<div id="controls" class="overlay">
+	<div id="buttons">
+		<div>
+			<button type="button" id="first"><span>First Page</span></button>
+			<button type="button" id="last"><span>Last Page</span></button>
+		</div>
+		<div>
+			<button type="button" id="previous"><span>Previous Page</span></button>
+			<button type="button" id="allpages"><span>Show All Pages</span></button>
+			<button type="button" id="next"><span>Next Page</span></button>
+		</div>
+	</div>
+	<div>
+		<progress id="progress" value="0" max="1"></progress>
+		<div id="current"></div>
+	</div>
+</div>
+<div id="gallery" class="overlay"></div>
+<div id="error" class="overlay">
+	<p>An unknown error has occurred.</p>
+</div>
+</body></html>

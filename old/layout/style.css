@@ -1,0 +1,39 @@
+body, html
+{height: 100%; margin: 0;}
+
+div#next
+{bottom: 0; right: 0;}
+
+div#next, div#prev
+{position: fixed;}
+
+div#page
+{background-position: center; background-repeat: no-repeat; background-size: auto 100%; height: 100%;}
+
+div#page img
+{display: none;}
+
+div#prev
+{left: 0; top: 0;}
+
+html
+{background: #000; color: #fff; font: 10pt Helvetica, Arial, sans-serif; padding: 0;}
+
+img.button
+{border: 0; height: 100px; width: 100px;}
+
+@media (max-width: 768px) {
+	a:hover img.button
+	{opacity: 1; transition: opacity 0.5s;}
+
+	html
+	{background: #fff; color: #000;}
+
+	img.button
+	{opacity: 0.8;}
+}
+
+@media (max-width: 320px) {
+	img.button
+	{height: 50px; opacity: 0.5; width: 50px;}
+}
